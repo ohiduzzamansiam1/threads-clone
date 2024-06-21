@@ -35,7 +35,7 @@ export default function LeftSideBar() {
   const pathname = usePathname();
   const { user } = useUser();
   return (
-    <div className="h-dvh md:w-1/4 md:py-5 px-2 hidden md:flex flex-col">
+    <div className="h-dvh md:w-1/3 md:py-5 px-2 hidden md:flex flex-col">
       <div className="flex items-center ml-8">
         <Image src="/images/logo.svg" width={50} height={50} alt="Logo" />
         <h1 className="font-bold text-xl ml-2">Threads</h1>
@@ -78,7 +78,7 @@ export default function LeftSideBar() {
           </div>
         </div>
 
-        <SignOutButton>
+        <SignOutButton redirectUrl="/">
           <Button variant={"ghost"} size={"icon"}>
             <LogOut size={16} color="red" />
           </Button>

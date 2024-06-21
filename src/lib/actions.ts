@@ -1,6 +1,7 @@
 "use server";
 
 import { auth } from "@clerk/nextjs/server";
+import { revalidatePath } from "next/cache";
 import { UTApi } from "uploadthing/server";
 import { z } from "zod";
 import { prisma } from "../../prisma/db";
@@ -71,6 +72,7 @@ export const handleThreadPost = async (formData: FormData) => {
       },
     });
 
+    revalidatePath("/threads");
     // Return a success response
     return { success: true };
   } catch (error: any) {

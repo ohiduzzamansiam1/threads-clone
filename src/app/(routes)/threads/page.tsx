@@ -1,8 +1,8 @@
-import AddThread from "../../_components/AddThread";
+import AddThread from "./_components/AddThread";
 
 export default function Home() {
   return (
-    <div className="flex-grow border-x-2 px-4 lg:px-0">
+    <div className="flex-1 border-x-2 overflow-auto no-scrollbar">
       <AddThread />
     </div>
   );
