@@ -26,10 +26,10 @@ export default function AddThread() {
 
     // Check if a file was selected
     if (selectedFile) {
-      // Check if the file size exceeds the limit (2MB)
-      if (selectedFile.size > 2 * 1024 * 1024) {
+      // Check if the file size exceeds the limit (10MB)
+      if (selectedFile.size > 10 * 1024 * 1024) {
         // Show an error toast message
-        toast.error("Image size exceeds the limit (2MB).");
+        toast.error("Image size exceeds the limit (10MB).");
         return;
       }
 
